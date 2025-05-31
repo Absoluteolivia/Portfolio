@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Weather Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #80d0c7, #13547a);
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .left-panel, .right-panel {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .left-panel {
+      flex: 2;
+      min-width: 600px;
+    }
+
+    .right-panel {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    input, button {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    button {
+      background-color: #0066ff;
+      color: white;
+      cursor: pointer;
+    }
+
+    #map {
+      height: 250px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .city {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .city img {
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+    }
+
+    canvas {
+      max-height: 180px;
+    }
+
+    h2, h3 {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <h2>Weather Dashboard</h2>
+    <input id="cityInput" type="text" placeholder="Enter city name..." />
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weatherResult"></div>
+    <div id="map"></div>
+    <div class="summary">
+      <h3>Summary Forecast</h3>
+      <canvas id="weatherChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="right-panel">
+    <h3>Popular Cities</h3>
+    <div class="popular-cities" id="popularCities">
+      <!-- Filled dynamically -->
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+  const apiKey = '4561877df1c8f4d8e603aedea88b8955';
+
+  let map = L.map('map').setView([20.5937, 78.9629], 4);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+  let marker;
+
+  async function getWeather() {
+    const city = document.getElementById('cityInput').value;
+    const resultDiv = document.getElementById('weatherResult');
+
+    if (!city) {
+      resultDiv.innerHTML = "Please enter a city name.";
+      return;
+    }
+
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.cod !== 200) {
+        resultDiv.innerHTML = `Error: ${data.message}`;
+        return;
+      }
+
+      const { lat, lon } = data.coord;
+      if (marker) map.removeLayer(marker);
+      map.setView([lat, lon], 10);
+      marker = L.marker([lat, lon]).addTo(map);
+
+      resultDiv.innerHTML = `
+        <h3>${data.name}, ${data.sys.country}</h3>
+        <p><strong>Temperature:</strong> ${data.main.temp} °C</p>
+        <p><strong>Weather:</strong> ${data.weather[0].description}</p>
+        <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+        <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
+      `;
+    } catch (error) {
+      resultDiv.innerHTML = 'Failed to fetch weather data.';
+      console.error(error);
+    }
+  }
+
+  const ctx = document.getElementById('weatherChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Now', '7 PM', '9 PM', '11 PM', '1 AM', '3 AM', '5 AM'],
+      datasets: [{
+        label: 'Temperature (°C)',
+        data: [22, 20, 22, 19, 21, 22, 23],
+        borderColor: '#fff',
+        backgroundColor: 'rgba(255,255,255,0.2)',
+        fill: true,
+        tension: 0.4
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          ticks: { color: 'white' }
+        },
+        x: {
+          ticks: { color: 'white' }
+        }
+      },
+      plugins: {
+        legend: {
+          labels: { color: 'white' }
+        }
+      }
+    }
+  });
+
+  const cities = ["Delhi", "Mumbai", "Hyderabad", "Bangalore", "Kolkata"];
+  const cityContainer = document.getElementById('popularCities');
+
+  async function loadPopularCitiesWeather() {
+    for (let city of cities) {
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+      const data = await res.json();
+      const icon = data.weather[0].icon;
+      const description = data.weather[0].description;
+
+      cityContainer.innerHTML += `
+        <div class="city">
+          <span>${city}</span>
+          <span>${description} <img src="https://openweathermap.org/img/wn/${icon}.png" alt="icon" /></span>
+        </div>
+      `;
+    }
+  }
+
+  loadPopularCitiesWeather();
+</script>
+
+</body>
+</html>

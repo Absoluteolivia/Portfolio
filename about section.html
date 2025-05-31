@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aboutt</title>
+</head>
+<style>
+#about.section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 100px;
+}
+
+#about .container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+#about .text-content {
+  flex: 1;
+  color: white;
+  text-align: left;
+}
+
+#about .text-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #077b32;
+  text-shadow: 0 0 10px #077b32;
+  position: relative;
+}
+
+#about .text-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #077b32;
+  box-shadow: 0 0 10px #077b32;
+}
+
+#about .text-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-shadow: 0 0 5px #077b32;
+}
+
+#about .image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .image-content img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 40px #077b32;
+  transition: transform 0.5s ease;
+}
+
+#about .image-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #about .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  #about .text-content h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+</style>
+<body>
+  <section id="about" class="section"> 
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
+      <div class="image-content">
+        <img src="\images\WhatsApp Image 2025-04-14 at 12.02.29 PM.png" alt="Olivia Das">
+      </div>
+      <div class="text-content">
+        <h2>About Me</h2>
+        <p>Hi! I'm Olivia Das, a passionate first-year CSE student with a love for both design and data. I enjoy learning new technologies and building creative, user-friendly websites.</p>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>

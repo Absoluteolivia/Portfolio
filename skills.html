@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills</title>
+  <style>
+    #skills.section {
+      width: 100%;
+      min-height: 100vh;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px;
+    }
+
+    #skills .container {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    #skills .text-content {
+      flex: 1;
+      color: white;
+      text-align: left;
+    }
+
+    #skills .text-content h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #077b32;
+      text-shadow: 0 0 10px #077b32;
+      position: relative;
+    }
+
+    #skills .text-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: #077b32;
+      box-shadow: 0 0 10px #077b32;
+    }
+
+    #skills .skill-bar {
+      margin-bottom: 20px;
+    }
+
+    #skills .skill-bar label {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    #skills .bar {
+      width: 100%;
+      height: 12px;
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    #skills .progress {
+      height: 100%;
+      background-color: #077b32;
+      box-shadow: 0 0 10px #077b32;
+      transition: width 1s ease-in-out;
+    }
+
+    #skills .image-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #skills .image-content img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 40px #077b32;
+      transition: transform 0.5s ease;
+    }
+
+    #skills .image-content img:hover {
+      transform: scale(1.05);
+    }
+
+    #skills .passion-section {
+      margin-top: 40px;
+    }
+
+    #skills .passion-section h3 {
+      font-size: 1.8rem;
+      color: #077b32;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px #077b32;
+    }
+
+    #skills .passion-section ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #skills .passion-section li {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #fff;
+      text-shadow: 0 0 5px #077b32;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      #skills .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #skills .text-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="image-content">
+        <img src="\images\WhatsApp Image 2025-04-16 at 8.22.06 PM.jpeg" alt="Olivia Das" />
+        <!-- Replace the above path with correct image path -->
+      </div>
+      <div class="text-content">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+          <label>HTML</label>
+          <div class="bar"><div class="progress" style="width: 90%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <label>CSS</label>
+          <div class="bar"><div class="progress" style="width: 85%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <label>JavaScript</label>
+          <div class="bar"><div class="progress" style="width: 75%"></div></div>
+        </div>
+
+        <div class="passion-section">
+          <h3>My Passions</h3>
+          <ul>
+            <li>🎨 Drawing</li>
+            <li>📸 Photography</li>
+            <li>🎥 Videography</li>
+            <li>✂️ Editing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
