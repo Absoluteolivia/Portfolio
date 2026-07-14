@@ -41,7 +41,7 @@ typeEffect();
 // Active Navbar Link
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinksScroll = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll",()=>{
 
@@ -58,7 +58,7 @@ window.addEventListener("scroll",()=>{
 
     });
 
-    navLinks.forEach(link=>{
+    navLinksScroll.forEach(link=>{
 
         link.classList.remove("active");
 

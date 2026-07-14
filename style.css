@@ -984,7 +984,8 @@ header{
 /* MOBILE NAVBAR */
 /* ========================= */
 
-.menu-btn{
+.menu-btn,
+.close-btn{
     display:none;
     font-size:28px;
     color:white;
@@ -996,6 +997,109 @@ header{
 /* ========================= */
 
 @media screen and (max-width:768px){
+
+.logo {
+    font-size: 26px;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.nav-links{
+    position:fixed;
+    right:-250px;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#0f172a;
+    box-shadow:-5px 0 25px rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding-top:100px;
+    padding-left:40px;
+    gap:30px;
+    transition:0.4s ease;
+    z-index:999;
+}
+
+.nav-links.active{
+    right:0;
+}
+
+.close-btn{
+    position:fixed;
+    top:25px;
+    right:25px;
+    z-index:1001;
+}
+
+.nav-links a {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.certificates h2,
+.journey h2,
+.research h2,
+.contact h2 {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+}
+
+.about{
+    margin:60px auto;
+}
+
+.about-container{
+    flex-direction:column;
+    gap:40px;
+}
+
+.about-left h2 {
+    text-align: center;
+}
+
+.about-right{
+    grid-template-columns:1fr;
+    width:100%;
+}
+
+.skills,
+.projects,
+.certificates,
+.research,
+.contact {
+    margin: 60px auto;
+}
+
+.projects-container,
+.certificate-container,
+.contact-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.research-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 25px;
+}
+
+.research-icon {
+    font-size: 50px;
+}
+
+.research-content h3 {
+    font-size: 20px;
+}
 
 .hero{
     flex-direction:column-reverse;
@@ -1060,21 +1164,6 @@ header{
     display:grid;
     grid-template-columns:1fr;
     gap:15px;
-}
-
-}
-@media (max-width:768px){
-
-.hero-image{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    margin:0;
-}
-
-.hero-image img{
-    width:260px;
-    height:260px;
 }
 
 }
