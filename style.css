@@ -244,11 +244,14 @@ header{
 .hero-image img{
     width:380px;
     height:380px;
+    max-width:100%;
+    display:block;
     border-radius:50%;
     object-fit:cover;
     border:6px solid #22c55e;
     box-shadow:0 0 40px rgba(34,197,94,.5);
 }
+
 .typing{
     color:#22c55e;
     font-weight:700;
@@ -988,38 +991,90 @@ header{
     cursor:pointer;
 }
 
-@media (max-width:768px){
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
 
-    .menu-btn{
-        display:block;
-    }
-    .close-btn{
-    display:none;
-    font-size:30px;
-    color:white;
-    cursor:pointer;
+@media screen and (max-width:768px){
+
+.hero{
+    flex-direction:column-reverse;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+    width:92%;
+    padding-top:100px;
 }
 
-    .navbar{
-        width:92%;
-        height:70px;
-    }
+.hero-text{
+    width:100%;
+}
 
-    .nav-links{
-        position:absolute;
-        top:70px;
-        left:-100%;
-        width:100%;
-        background:#111827;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:25px;
-        padding:30px 0;
-        transition:0.4s;
-    }
+.hero-text h1{
+    font-size:52px;
+}
 
-    .nav-links.active{
-        left:0;
-    }
+.hero-text h2{
+    font-size:28px;
+}
+
+.hero-text h3{
+    font-size:20px;
+}
+
+.hero-text p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+.hero-image{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-outline{
+    width:220px;
+}
+
+.social-icons{
+    justify-content:center;
+    display:flex;
+}
+
+.achievement-bar{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+}
+@media (max-width:768px){
+
+.hero-image{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin:0;
+}
+
+.hero-image img{
+    width:260px;
+    height:260px;
+}
+
 }
