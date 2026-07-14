@@ -91,3 +91,33 @@ topBtn.onclick = function () {
     });
 
 };
+const navLinks = document.getElementById("navLinks");
+
+const menuBtn = document.querySelector(".menu-btn");
+
+const closeBtn = document.querySelector(".close-btn");
+
+function showMenu(){
+
+    navLinks.classList.add("active");
+
+    menuBtn.style.display="none";
+
+    closeBtn.style.display="block";
+
+}
+
+function closeMenu(){
+
+    navLinks.classList.remove("active");
+
+    menuBtn.style.display="block";
+
+    closeBtn.style.display="none";
+
+}
+document.querySelectorAll(".nav-links a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        closeMenu();
+    });
+});
