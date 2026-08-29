@@ -1,96 +1,57 @@
-# 🌐 Olivia Das | Personal Portfolio
+# 🌐 Olivia Das | Backend Developer Portfolio
 
-Welcome to my personal portfolio repository! This portfolio showcases my skills, projects, research publication, certificates, and journey as a Computer Science & Engineering student.
+Welcome to the personal developer portfolio repository of **Olivia Das**, B.Tech Computer Science & Engineering student and aspiring Backend Developer.
 
 ---
 
-# 📸 Portfolio Preview
+## 👨‍💻 Professional Identity & Focus
 
-## 🏠 Home
-![Home](assets/portfolio-home.png)
+- **Role:** Aspiring Backend Developer & Computer Science Student
+- **Location:** Hooghly, West Bengal, India
+- **Core Focus:** Python-based Backend Engineering, REST APIs, Relational & NoSQL Databases, Scalable Web Applications.
 
-## 👩‍💻 About
-![About](assets/about-section.png)
+---
 
-## 💻 Skills
-![Skills](assets/skills-section.png)
+## 🛠️ Technical Stack
 
-## 🚀 Projects
-![Projects](assets/projects-section.png)
+- **Languages:** Python, JavaScript, SQL
+- **Backend:** Django, Django REST Framework, Express.js, REST APIs
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Databases:** MySQL, MongoDB
+- **Tools:** Git, GitHub, VS Code, PyCharm, Postman
+- **Libraries:** Pandas, NumPy, Matplotlib
+
+---
+
+## 📂 Featured Projects
+
+1. **SwiftLink – URL Shortener with Analytics**
+   - *Tech:* Node.js, Express.js, React, Redis, SQLite
+   - *Highlights:* REST APIs, Base62 short-code generation algorithm, Redis caching layer for sub-millisecond redirection, SQLite database indexing, rate limiting middleware, click & device analytics.
+2. **AI-Career-Skill-Analyzer**
+   - *Tech:* Node.js, Express.js, MongoDB, Python
+   - *Highlights:* Backend APIs, Career & skill data processing engines, MongoDB storage, Python integration.
+3. **Netflix SQL Analysis**
+   - *Tech:* MySQL, SQL, Git, GitHub
+   - *Highlights:* 15+ complex SQL analytical queries, multi-table JOINs, GROUP BY, HAVING, subqueries, and window functions.
+
+---
 
 ## 📄 Research Publication
-![Research](assets/research-section.png)
 
-## 📝 Journal
-![Journal](assets/journey-section.png)
-
-## 🏆 Certificates
-![Certificates](assets/certificates-section.png)
-
-## 📬 Contact
-![Contact](assets/contact-section.png)
+- **Paper Title:** *"Controlling Diabetes of High Blood Sugar Level through Souls Stickers Akka Wafers"*
+- **Journal:** International Journal of Versatile Research and Analysis (IJVRA)
+- **Volume & Issue:** Volume 4, Issue 4 (April 2026) | Paper ID: `IJVRA2604612`
+- **Authors:** Olivia Das, Arka Rajak, Arijit Das, Paramita Das, Sneha Biswas.
 
 ---
 
-# 👩‍💻 About Me
+## 📫 Contact & Links
 
-Hi! I'm **Olivia Das**, a B.Tech CSE student passionate about **Data Science, Data Analytics, Frontend Development, and Machine Learning**. I enjoy building modern web applications and solving real-world problems with data.
-
----
-
-# 🚀 Features
-
-- Responsive Portfolio Website
-- Animated Navigation Bar
-- Dark Theme
-- Research & Publications
-- Projects Showcase
-- Certificates Section
-- Contact Section
-- Resume Download
-- Back To Top Button
+- **Email:** [absoluteolivia03@gmail.com](mailto:absoluteolivia03@gmail.com)
+- **GitHub:** [https://github.com/Absoluteolivia](https://github.com/Absoluteolivia)
+- **LinkedIn:** [https://www.linkedin.com/in/olivia-das-b7b706282/](https://www.linkedin.com/in/olivia-das-b7b706282/)
 
 ---
 
-# 🛠️ Tech Stack
-
-- HTML5
-- CSS3
-- JavaScript
-- Python
-- SQL
-- Pandas
-- NumPy
-- Power BI
-- Git & GitHub
-
----
-
-# 📂 Featured Projects
-
-- 🎬 Netflix SQL Analysis
-- 🤖 AI Task Manager
-- 📊 Data Analytics Projects
-- 🌐 Personal Portfolio Website
-
----
-
-# 📄 Research Publication
-
-**Published in:** International Journal of Versatile Research and Analysis (IJVRA)
-
----
-
-# 📫 Contact
-
-📧 Email: **absoluteolivia03@gmail.com**
-
-💼 LinkedIn:  
-https://www.linkedin.com/in/olivia-das-b7b706282/
-
-🐙 GitHub:  
-https://github.com/Absoluteolivia
-
----
-
-⭐ If you like this project, don't forget to leave a ⭐ on the repository!
+© 2026 Olivia Das. All rights reserved.

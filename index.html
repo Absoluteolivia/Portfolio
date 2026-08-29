@@ -3,473 +3,761 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Das | Portfolio</title>
+    <title>Olivia Das | Backend Developer & Computer Science Student</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Olivia Das | Backend Developer & Computer Science Student">
+    <meta name="description" content="Portfolio of Olivia Das, a Computer Science student and aspiring Backend Developer specializing in Python, Django, REST APIs, databases, and scalable web applications.">
+    <meta name="keywords" content="Olivia Das, Backend Developer, Python, Django, REST APIs, SQL, Express.js, MongoDB, Computer Science, Portfolio">
+    <meta name="author" content="Olivia Das">
+    <meta name="theme-color" content="#0b0f19">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Absoluteolivia">
+    <meta property="og:title" content="Olivia Das | Backend Developer & Computer Science Student">
+    <meta property="og:description" content="Building reliable backend systems, REST APIs, and data-driven web applications with Python, Django, Node.js, and modern databases.">
+    <meta property="og:image" content="assets/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Olivia Das | Backend Developer">
+    <meta property="twitter:description" content="Building reliable backend systems, REST APIs, and data-driven web applications with Python, Django, Node.js, and modern databases.">
+    <meta property="twitter:image" content="assets/profile.jpg">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous">
 </head>
 
 <body>
 
-<header>
+<!-- Header & Navbar -->
+<header id="header">
+    <nav class="navbar" aria-label="Main Navigation">
+        <a href="#home" class="logo" aria-label="Olivia Das Portfolio Home">
+            Olivia<span>.dev</span>
+        </a>
 
-<nav class="navbar">
-<i class="fa-solid fa-bars menu-btn" onclick="showMenu()"></i>
-<i class="fa-solid fa-xmark close-btn" style="display: none;" onclick="closeMenu()"></i>
-<div class="logo">
-Olivia<span>Das</span>
-</div>
+        <button class="mobile-toggle" id="menuBtn" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="navLinks">
+            <i class="fa-solid fa-bars menu-btn"></i>
+        </button>
 
-<ul class="nav-links" id="navLinks">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#research">Publications</a></li>
-<li><a href="#certificates">Certificates</a></li>
-<li><a href="#contact">Contact</a></li>
+        <div class="nav-overlay" id="navOverlay"></div>
 
-</ul>
-
-</nav>
-
+        <ul class="nav-links" id="navLinks" role="menubar">
+            <li role="none"><a href="#home" role="menuitem" class="nav-link active">Home</a></li>
+            <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
+            <li role="none"><a href="#skills" role="menuitem" class="nav-link">Skills</a></li>
+            <li role="none"><a href="#projects" role="menuitem" class="nav-link">Projects</a></li>
+            <li role="none"><a href="#education" role="menuitem" class="nav-link">Education</a></li>
+            <li role="none"><a href="#publication" role="menuitem" class="nav-link">Publication</a></li>
+            <li role="none"><a href="#hackathons" role="menuitem" class="nav-link">Hackathons</a></li>
+            <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
 </header>
-<section id="home" class="hero">
-    <div class="hero-text">
 
-        <h3>Hello, I'm</h3>
-
-        <h1>Olivia <span>Das</span></h1>
-
-<h2>
-    <span class="typing"></span>
-</h2>
-        <p>
-            B.Tech CSE student passionate about Data Science, Data Analytics, and Frontend Development. Currently learning Python, SQL, Pandas, NumPy, Power BI while also building responsive web applications using HTML, CSS, JavaScript, and modern frontend tools.
-        </p>
-
-        <div class="hero-buttons">
-<a href="assets/resume.pdf" download class="btn">
-    Download Resume
-</a>            <a href="#projects" class="btn-outline">View Projects</a>
-        </div>
-
-        <div class="social-icons">
-            <a href="https://github.com/Absoluteolivia" target="_blank"><i class="fab fa-github"></i></a>
-
-            <a href="https://www.linkedin.com/in/olivia-das-b7b706282/" target="_blank"><i class="fab fa-linkedin"></i></a>
-
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-<div class="achievement-bar">
-
-    <div class="achievement">
-        <i class="fa-solid fa-book"></i>
-        <span>1 Journal Publication</span>
-    </div>
-
-    <div class="achievement">
-        <i class="fa-solid fa-code"></i>
-        <span>5+ Projects</span>
-    </div>
-
-    <div class="achievement">
-        <i class="fa-solid fa-chart-line"></i>
-        <span>Data Science Learner</span>
-    </div>
-
-    <div class="achievement">
-        <i class="fa-solid fa-laptop-code"></i>
-        <span>Frontend Developer</span>
-    </div>
-
-</div>
-    </div>
-
-    <div class="hero-image">
-
-        <img src="assets/profile.jpg" alt="Olivia Das">
-
-    </div>
-
-</section>
-<section id="about" class="about">
-
-    <div class="about-container">
-
-        <div class="about-left">
-
-            <h2>About <span>Me</span></h2>
-
-            <p>
-                Hi! I'm <b>Olivia Das</b>, a B.Tech Computer Science & Engineering student from
-                Hooghly, West Bengal.
-
-                I am passionate about <span>Data Science</span>,
-                <span>Data Analytics</span>, and
-                <span>Frontend Development</span>.
-
-                I enjoy solving real-world problems with Python & SQL while also
-                designing modern, responsive websites.
-
-                My goal is to become a skilled Data Scientist who can build
-                impactful AI and data-driven solutions.
-            </p>
-
-        </div>
-
-        <div class="about-right">
-
-            <div class="card">
-                🎓 <b>Education</b><br>
-                B.Tech in Computer Science & Engineering
-            </div>
-
-            <div class="card">
-                💻 <b>Currently Learning</b><br>
-                Python • SQL • Pandas • NumPy • Power BI
-            </div>
-
-            <div class="card">
-                🎯 <b>Career Goal</b><br>
-                Data Scientist
-            </div>
-
-            <div class="card">
-                📍 <b>Location</b><br>
-                Hooghly, West Bengal, India
-            </div>
-
-        </div>
-
-    </div>
-<section id="skills" class="skills">
-
-    <h2>My <span>Skills</span></h2>
-
-    <div class="skills-container">
-
-        <div class="skill-card">
-            <i class="fa-brands fa-python"></i>
-            <h3>Python</h3>
-            <p>Data Analysis & Automation</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-database"></i>
-            <h3>SQL</h3>
-            <p>Queries, Joins & Database</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-chart-column"></i>
-            <h3>Power BI</h3>
-            <p>Dashboard & Visualization</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-table"></i>
-            <h3>Pandas</h3>
-            <p>Data Cleaning</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-solid fa-square-root-variable"></i>
-            <h3>NumPy</h3>
-            <p>Numerical Computing</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML5</h3>
-            <p>Responsive Structure</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS3</h3>
-            <p>Modern UI Design</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-js"></i>
-            <h3>JavaScript</h3>
-            <p>Interactive Websites</p>
-        </div>
-
-        <div class="skill-card">
-            <i class="fa-brands fa-git-alt"></i>
-            <h3>Git & GitHub</h3>
-            <p>Version Control</p>
-        </div>
-
-    </div>
-
-</section>
-<section id="projects" class="projects">
-
-    <h2>Featured <span>Projects</span></h2>
-
-    <div class="projects-container">
-
-        <div class="project-card">
-            <h3>🎬 Netflix SQL Analysis</h3>
-            <p>
-                An SQL project to analyze Netflix datasets using Joins,
-                Window Functions, Aggregations and Business Insights.
-            </p>
-
-            <div class="tech-stack">
-                <span>SQL</span>
-                <span>MySQL</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="#" class="project-btn">GitHub</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>🤖 AI Task Manager</h3>
-            <p>
-                Full-stack task management application with authentication,
-                responsive UI and MongoDB database.
-            </p>
-
-            <div class="tech-stack">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="#" class="project-btn">GitHub</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>📊 Data Cleaning Project</h3>
-            <p>
-                Cleaned raw datasets using Python, Pandas and NumPy before
-                performing analysis and visualization.
-            </p>
-
-            <div class="tech-stack">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>NumPy</span>
-            </div>
-
-            <div class="project-buttons">
-                <a href="#" class="project-btn">GitHub</a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<section id="research" class="research">
-
-    <h2>Research & <span>Publications</span></h2>
-
-    <div class="research-card">
-
-        <div class="research-icon">
-            <i class="fa-solid fa-book-open"></i>
-        </div>
-
-        <div class="research-content">
-
-            <span class="badge">Published Journal Paper</span>
-
-            <h3>
-                Controlling Diabetes of High Blood Sugar Level through Souls Stickers Akka Wafers
-            </h3>
-
-            <p class="journal-name">
-                International Journal of Versatile Research and Analysis (IJVRA)
-            </p>
-
-            <p class="research-details">
-
-                <strong>Publication Date:</strong> 14 April 2026 <br>
-
-                <strong>Volume:</strong> Volume 4, Issue 4 <br>
-
-                <strong>Paper ID:</strong> IJVRA2604612
-
-            </p>
-
-            <p class="authors">
-
-                <strong>Authors:</strong>
-
-                Olivia Das,
-
-                Arka Rajak,
-
-                Arijit Das,
-
-                Paramita Das,
-
-                Sneha Biswas
-
-            </p>
-
-            <div class="research-buttons">
-
-                <a href="assets/journal-certificate.pdf"
-                   target="_blank"
-                   class="research-btn">
-
-                    View Certificate
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section id="certificates" class="certificates">
-
-    <h2>My <span>Certificates</span></h2>
-
-    <div class="certificate-container">
-
-        <div class="certificate-card">
-            <i class="fa-solid fa-award"></i>
-            <h3>Data Analytics Course</h3>
-            <p>Completed a comprehensive Data Analytics course covering Excel, SQL, Python, Power BI and Tableau.</p>
-        </div>
-
-        <div class="certificate-card">
-            <i class="fa-solid fa-certificate"></i>
-            <h3>Python Programming</h3>
-            <p>Hands-on learning of Python fundamentals, data structures and problem solving.</p>
-        </div>
-
-        <div class="certificate-card">
-            <i class="fa-solid fa-laptop-code"></i>
-            <h3>Frontend Development</h3>
-            <p>Built responsive websites using HTML, CSS and JavaScript with modern UI design.</p>
-        </div>
-
-        <div class="certificate-card">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <h3>Future Certifications</h3>
-            <p>Currently preparing for Google, Microsoft and IBM professional certifications.</p>
-        </div>
-
-    </div>
-
-</section>
-<section id="journey" class="journey">
-
-    <h2>My <span>Journey</span></h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-
-            <div class="timeline-content">
-                <h3>B.Tech in Computer Science & Engineering</h3>
-                <h4>JIS College of Engineering</h4>
-                <p>
-                    Pursuing B.Tech in CSE with a strong interest in
-                    Data Science, Data Analytics and Frontend Development.
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-label="Hero Section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="badge-tag">
+                    <span class="pulse-dot"></span> Available for Backend Opportunities
+                </div>
+                <h3 class="hero-greeting">Hi, I'm</h3>
+                <h1 class="hero-name">Olivia <span>Das</span></h1>
+                <h2 class="hero-title">
+                    <span class="typing" id="typing"></span><span class="cursor">&nbsp;</span>
+                </h2>
+                <p class="hero-bio">
+                    Building reliable backend systems, REST APIs, and data-driven web applications with Python, Django, Node.js, and modern databases.
                 </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    <a href="assets/resume.pdf" download="Olivia_Das_Resume.pdf" class="btn btn-secondary" title="Download Resume PDF">
+                        <i class="fa-solid fa-download"></i> Resume
+                    </a>
+                </div>
+
+                <div class="social-links" aria-label="Social Profiles">
+                    <a href="https://github.com/Absoluteolivia" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/olivia-das-b7b706282/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:absoluteolivia03@gmail.com" aria-label="Email Me" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="key-tech-pills">
+                    <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="pill"><i class="fa-solid fa-server"></i> Django REST</span>
+                    <span class="pill"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                    <span class="pill"><i class="fa-solid fa-database"></i> SQL & MongoDB</span>
+                </div>
+            </div>
+
+            <!-- Visual Developer Component -->
+            <div class="hero-visual">
+                <div class="visual-card-wrapper">
+                    <!-- Profile Card -->
+                    <div class="profile-header-box">
+                        <div class="profile-img-ring">
+                            <img src="assets/profile.jpg" alt="Olivia Das Profile Picture" class="profile-img">
+                        </div>
+                        <div class="profile-info-mini">
+                            <h4>Olivia Das</h4>
+                            <p><i class="fa-solid fa-location-dot"></i> Hooghly, West Bengal, India</p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Terminal & API Simulator -->
+                    <div class="terminal-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <div class="terminal-title">
+                                <i class="fa-solid fa-terminal"></i> api-server.py — bash
+                            </div>
+                        </div>
+
+                        <div class="terminal-tabs">
+                            <button class="term-tab active" data-tab="tab-api">GET /api/v1/health</button>
+                            <button class="term-tab" data-tab="tab-sql">SQL Query</button>
+                            <button class="term-tab" data-tab="tab-redis">Redis Cache</button>
+                        </div>
+
+                        <div class="terminal-body">
+                            <!-- Tab 1: REST API Response -->
+                            <div class="term-content active" id="tab-api">
+                                <div class="term-line"><span class="cmd-prompt">$</span> curl -X GET https://api.oliviadas.dev/v1/health</div>
+                                <div class="term-line status-line"><span class="http-status">HTTP/1.1 200 OK</span> <span class="latency">12ms</span></div>
+                                <pre class="json-code">
+{
+  <span class="key">"status"</span>: <span class="str">"healthy"</span>,
+  <span class="key">"role"</span>: <span class="str">"Backend Developer"</span>,
+  <span class="key">"stack"</span>: [<span class="str">"Python"</span>, <span class="str">"Django"</span>, <span class="str">"REST APIs"</span>],
+  <span class="key">"database"</span>: <span class="str">"Connected (PostgreSQL/MySQL)"</span>,
+  <span class="key">"cache"</span>: <span class="str">"Redis (Active)"</span>
+}</pre>
+                            </div>
+
+                            <!-- Tab 2: SQL Query Execution -->
+                            <div class="term-content" id="tab-sql">
+                                <div class="term-line"><span class="cmd-prompt">$</span> mysql -u admin -p -e "SELECT * FROM analytics;"</div>
+                                <pre class="sql-code">
+<span class="kw">SELECT</span> short_code, original_url, clicks
+<span class="kw">FROM</span> urls
+<span class="kw">WHERE</span> created_at >= <span class="str">'2026-01-01'</span>
+<span class="kw">ORDER BY</span> clicks <span class="kw">DESC</span>
+<span class="kw">LIMIT</span> 3;
+
+<span class="comment">-- 3 rows returned in 0.004 sec</span></pre>
+                            </div>
+
+                            <!-- Tab 3: Redis In-Memory Cache -->
+                            <div class="term-content" id="tab-redis">
+                                <div class="term-line"><span class="cmd-prompt">$</span> redis-cli GET url:swift_8a92</div>
+                                <div class="term-line output"><span class="str">"https://oliviadas.dev/portfolio"</span></div>
+                                <div class="term-line"><span class="cmd-prompt">$</span> redis-cli INCR url:swift_8a92:clicks</div>
+                                <div class="term-line output">(integer) 1420</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
+    <!-- About Section -->
+    <section id="about" class="section about-section" aria-label="About Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>About <span>Me</span></h2>
+                <p class="section-subtitle">Passionate about building scalable backend infrastructure & data-driven applications</p>
+            </div>
 
-            <div class="timeline-content">
-                <h3>Learning Data Science</h3>
-                <h4>Python • SQL • Pandas • NumPy • Power BI</h4>
+            <div class="about-grid">
+                <div class="about-bio-card glass-card">
+                    <h3>Engineering Mindset & Backend Core</h3>
+                    <p>
+                        Hi! I am <strong>Olivia Das</strong>, a B.Tech Computer Science & Engineering student at JIS College of Engineering based in Hooghly, West Bengal, India.
+                    </p>
+                    <p>
+                        My core engineering focus is on <span>Python-based backend development</span>, <span>RESTful APIs</span>, <span>relational & NoSQL database management</span>, and architecting scalable web applications. I enjoy solving algorithmic challenges, structuring efficient SQL queries, and implementing robust backend services.
+                    </p>
+                    <p>
+                        I am actively seeking software engineering internships and junior backend development roles where I can contribute to real-world production codebases and high-performance server architectures.
+                    </p>
+                </div>
 
-                <p>
-                    Building projects and strengthening analytical skills
-                    through continuous practice.
-                </p>
+                <div class="about-highlights-grid">
+                    <div class="highlight-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4>Education</h4>
+                        <p class="highlight-title">B.Tech Computer Science & Engineering</p>
+                        <p class="highlight-sub">JIS College of Engineering (2024 – 2028)</p>
+                    </div>
+
+                    <div class="highlight-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                        <h4>Core Focus</h4>
+                        <p class="highlight-title">Backend Architecture</p>
+                        <p class="highlight-sub">Python • Django • REST APIs • Node.js</p>
+                    </div>
+
+                    <div class="highlight-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h4>Career Goal</h4>
+                        <p class="highlight-title">Backend Engineer</p>
+                        <p class="highlight-sub">Scalable Web Systems & API Development</p>
+                    </div>
+
+                    <div class="highlight-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h4>Location</h4>
+                        <p class="highlight-title">Hooghly, West Bengal</p>
+                        <p class="highlight-sub">India (Open to Remote / On-site)</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section skills-section" aria-label="Technical Skills Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Technical <span>Stack</span></h2>
+                <p class="section-subtitle">Categorized technologies, tools, and databases I work with</p>
+            </div>
 
-            <div class="timeline-content">
-                <h3>Frontend Development</h3>
-                <h4>HTML • CSS • JavaScript</h4>
+            <div class="skills-grid">
+                <!-- Category 1: Languages -->
+                <div class="skill-category-card glass-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-code category-icon"></i>
+                        <h3>LANGUAGES</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <div class="skill-badge"><i class="fa-brands fa-python"></i> <span>Python</span></div>
+                        <div class="skill-badge"><i class="fa-brands fa-js"></i> <span>JavaScript</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-database"></i> <span>SQL</span></div>
+                    </div>
+                </div>
 
-                <p>
-                    Designing modern responsive websites and personal projects.
-                </p>
+                <!-- Category 2: Backend -->
+                <div class="skill-category-card glass-card featured-category">
+                    <div class="featured-ribbon">PRIMARY FOCUS</div>
+                    <div class="category-header">
+                        <i class="fa-solid fa-server category-icon"></i>
+                        <h3>BACKEND</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <div class="skill-badge"><i class="fa-brands fa-python"></i> <span>Django</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-plug"></i> <span>Django REST Framework</span></div>
+                        <div class="skill-badge"><i class="fa-brands fa-node-js"></i> <span>Express.js</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-gears"></i> <span>REST APIs</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Frontend -->
+                <div class="skill-category-card glass-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-laptop-code category-icon"></i>
+                        <h3>FRONTEND</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <div class="skill-badge"><i class="fa-brands fa-html5"></i> <span>HTML5</span></div>
+                        <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> <span>CSS3</span></div>
+                        <div class="skill-badge"><i class="fa-brands fa-js"></i> <span>JavaScript</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Databases -->
+                <div class="skill-category-card glass-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-database category-icon"></i>
+                        <h3>DATABASES</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <div class="skill-badge"><i class="fa-solid fa-database"></i> <span>MySQL</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-leaf"></i> <span>MongoDB</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Tools -->
+                <div class="skill-category-card glass-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-wrench category-icon"></i>
+                        <h3>TOOLS</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <div class="skill-badge"><i class="fa-brands fa-git-alt"></i> <span>Git</span></div>
+                        <div class="skill-badge"><i class="fa-brands fa-github"></i> <span>GitHub</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-code"></i> <span>VS Code</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-terminal"></i> <span>PyCharm</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-paper-plane"></i> <span>Postman</span></div>
+                    </div>
+                </div>
+
+                <!-- Category 6: Libraries -->
+                <div class="skill-category-card glass-card">
+                    <div class="category-header">
+                        <i class="fa-solid fa-cubes category-icon"></i>
+                        <h3>LIBRARIES</h3>
+                    </div>
+                    <div class="skill-badges">
+                        <div class="skill-badge"><i class="fa-solid fa-table"></i> <span>Pandas</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-calculator"></i> <span>NumPy</span></div>
+                        <div class="skill-badge"><i class="fa-solid fa-chart-line"></i> <span>Matplotlib</span></div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section" aria-label="Projects Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Featured <span>Projects</span></h2>
+                <p class="section-subtitle">Real-world backend systems, APIs, and data analysis projects</p>
+            </div>
+
+            <div class="projects-wrapper">
+                <!-- Featured Project: SwiftLink -->
+                <div class="project-card featured-project-card glass-card">
+                    <div class="featured-badge"><i class="fa-solid fa-star"></i> FEATURED PROJECT</div>
+                    
+                    <div class="featured-project-content">
+                        <div class="project-header">
+                            <h3>SwiftLink – URL Shortener with Analytics</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+
+                        <p class="project-desc">
+                            Full-stack URL shortening platform engineered with high-performance REST APIs, fast URL redirection, link management, and real-time click analytics.
+                        </p>
+
+                        <div class="highlights-box">
+                            <h4><i class="fa-solid fa-list-check"></i> Technical Highlights:</h4>
+                            <ul class="highlights-list">
+                                <li><i class="fa-solid fa-check"></i> REST API design with Express.js routing</li>
+                                <li><i class="fa-solid fa-check"></i> Base62-style short-code generation algorithm</li>
+                                <li><i class="fa-solid fa-check"></i> Redis caching layer for sub-millisecond redirects</li>
+                                <li><i class="fa-solid fa-check"></i> Database indexing on short_code fields in SQLite</li>
+                                <li><i class="fa-solid fa-check"></i> API rate limiting middleware to prevent abuse</li>
+                                <li><i class="fa-solid fa-check"></i> Click, browser, device, referrer & geographic analytics</li>
+                                <li><i class="fa-solid fa-check"></i> Dynamic QR code generation for shortened links</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/Absoluteolivia" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fa-brands fa-github"></i> View GitHub Repository
+                            </a>
+                            <button class="btn btn-outline architecture-btn" id="openArchModal">
+                                <i class="fa-solid fa-diagram-project"></i> Architecture Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Projects Grid -->
+                <div class="projects-grid">
+                    <!-- Project 2: AI Career Skill Analyzer -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <h3>AI-Career-Skill-Analyzer</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+
+                        <p class="project-desc">
+                            AI-powered career and skill analysis platform designed to evaluate skill gaps and process career development insights.
+                        </p>
+
+                        <div class="highlights-box">
+                            <h4><i class="fa-solid fa-list-check"></i> Technical Highlights:</h4>
+                            <ul class="highlights-list">
+                                <li><i class="fa-solid fa-check"></i> RESTful Backend API architecture</li>
+                                <li><i class="fa-solid fa-check"></i> Career & skill data processing engines</li>
+                                <li><i class="fa-solid fa-check"></i> MongoDB document storage for career profiles</li>
+                                <li><i class="fa-solid fa-check"></i> Python integration for analytical processing</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/Absoluteolivia" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Netflix SQL Analysis -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <h3>Netflix SQL Analysis</h3>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">GitHub</span>
+                            </div>
+                        </div>
+
+                        <p class="project-desc">
+                            Relational database analysis using a comprehensive Netflix movies and TV shows dataset to derive business insights.
+                        </p>
+
+                        <div class="highlights-box">
+                            <h4><i class="fa-solid fa-list-check"></i> Technical Highlights:</h4>
+                            <ul class="highlights-list">
+                                <li><i class="fa-solid fa-check"></i> 15+ complex SQL analytical queries</li>
+                                <li><i class="fa-solid fa-check"></i> Multi-table JOINs, GROUP BY & HAVING aggregations</li>
+                                <li><i class="fa-solid fa-check"></i> Subqueries & SQL window functions</li>
+                                <li><i class="fa-solid fa-check"></i> Content ratings, genre trends & release analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/Absoluteolivia" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                                <i class="fa-brands fa-github"></i> GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project System Architecture Modal -->
+    <div class="modal-backdrop" id="archModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3 id="modalTitle"><i class="fa-solid fa-sitemap"></i> SwiftLink System Architecture</h3>
+                <button class="modal-close" id="closeArchModal" aria-label="Close Modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="arch-section">
+                    <h4><i class="fa-solid fa-circle-info"></i> System Problem & Solution</h4>
+                    <p>
+                        <strong>Problem:</strong> Standard URL shortening requires low-latency URL redirection while handling analytics data ingestion and protecting the system against high-frequency API abuse.
+                    </p>
+                    <p>
+                        <strong>Solution:</strong> Implemented an Express.js API gateway with a Redis cache-aside pattern. Frequently accessed shortened keys hit Redis directly in sub-milliseconds, bypassing database disk reads.
+                    </p>
+                </div>
+
+                <div class="arch-diagram-box">
+                    <h4><i class="fa-solid fa-diagram-next"></i> Request Pipeline Architecture</h4>
+                    <div class="diagram-flow">
+                        <div class="flow-step">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>Client Request</span>
+                        </div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="flow-step highlight">
+                            <i class="fa-solid fa-gears"></i>
+                            <span>Express.js API Gateway</span>
+                            <small>Rate Limiter Middleware</small>
+                        </div>
+                        <div class="flow-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        <div class="flow-split">
+                            <div class="flow-step cache">
+                                <i class="fa-solid fa-bolt"></i>
+                                <span>Redis Cache</span>
+                                <small>Sub-ms Redirect</small>
+                            </div>
+                            <div class="flow-step db">
+                                <i class="fa-solid fa-database"></i>
+                                <span>SQLite Index</span>
+                                <small>Base62 Lookup</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arch-tech-grid">
+                    <div class="arch-tech-item">
+                        <strong>Base62 Short Code</strong>
+                        <span>Encodes auto-increment IDs into compact alphanumeric short keys.</span>
+                    </div>
+                    <div class="arch-tech-item">
+                        <strong>Database Indexing</strong>
+                        <span>B-tree indexed short_code column for O(log N) lookups on cache misses.</span>
+                    </div>
+                    <div class="arch-tech-item">
+                        <strong>Analytics Aggregation</strong>
+                        <span>Captures User-Agent, Referrer, and IP geolocations asynchronously.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-</section>
-<section id="contact" class="contact">
+    <!-- Education Section -->
+    <section id="education" class="section education-section" aria-label="Education Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Education</h2>
+                <p class="section-subtitle">Academic foundation in Computer Science & Engineering</p>
+            </div>
 
-    <h2>Contact <span>Me</span></h2>
+            <div class="education-card glass-card">
+                <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="edu-details">
+                    <h3>JIS College of Engineering</h3>
+                    <h4>Bachelor of Technology (B.Tech) — Computer Science & Engineering</h4>
+                    <div class="edu-meta">
+                        <span class="meta-item"><i class="fa-solid fa-calendar"></i> 2024 – 2028 (Expected)</span>
+                        <span class="meta-item"><i class="fa-solid fa-location-dot"></i> West Bengal, India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="contact-container">
+    <!-- Publication Section -->
+    <section id="publication" class="section publication-section" aria-label="Publication Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Research & <span>Publication</span></h2>
+                <p class="section-subtitle">Peer-reviewed academic research paper</p>
+            </div>
 
-        <div class="contact-card">
-            <i class="fa-solid fa-envelope"></i>
-            <h3>Email</h3>
-            <p>absoluteolivia03@gmail.com</p>
+            <div class="publication-card glass-card">
+                <div class="pub-badge"><i class="fa-solid fa-book-open"></i> Published Journal Paper</div>
+                
+                <h3 class="pub-title">"Controlling Diabetes of High Blood Sugar Level through Souls Stickers Akka Wafers"</h3>
+                
+                <p class="pub-journal">
+                    <strong>Journal:</strong> International Journal of Versatile Research and Analysis (IJVRA)
+                </p>
 
-            <a href="mailto:absoluteolivia03@gmail.com" class="contact-btn">
-                Send Email
-            </a>
+                <div class="pub-details-grid">
+                    <div><strong>Volume:</strong> Volume 4, Issue 4</div>
+                    <div><strong>Publication Date:</strong> April 2026</div>
+                    <div><strong>Paper ID:</strong> IJVRA2604612</div>
+                </div>
+
+                <div class="pub-authors">
+                    <strong>Authors:</strong> Olivia Das, Arka Rajak, Arijit Das, Paramita Das, Sneha Biswas
+                </div>
+
+                <div class="pub-actions">
+                    <a href="assets/journal-certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> View Certificate PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hackathons Section -->
+    <section id="hackathons" class="section hackathons-section" aria-label="Hackathons Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Hackathons</h2>
+                <p class="section-subtitle">Competitive coding & hackathon participation</p>
+            </div>
+
+            <div class="hackathons-grid">
+                <div class="hackathon-card glass-card">
+                    <div class="hack-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <h3>AI & Web3 Hackathon</h3>
+                    <span class="hack-badge">Participant</span>
+                </div>
+
+                <div class="hackathon-card glass-card">
+                    <div class="hack-icon"><i class="fa-solid fa-flag"></i></div>
+                    <h3>Smart India Hackathon (SIH) 2025</h3>
+                    <span class="hack-badge">Participant</span>
+                </div>
+
+                <div class="hackathon-card glass-card">
+                    <div class="hack-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>Innovocon</h3>
+                    <span class="hack-badge">Participant</span>
+                </div>
+
+                <div class="hackathon-card glass-card">
+                    <div class="hack-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>BINARY Hackathon</h3>
+                    <span class="hack-badge">Participant</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="section languages-section" aria-label="Languages Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Languages</h2>
+                <p class="section-subtitle">Linguistic proficiencies</p>
+            </div>
+
+            <div class="languages-grid">
+                <div class="lang-card glass-card">
+                    <i class="fa-solid fa-language"></i>
+                    <h4>Bengali</h4>
+                    <p>Native</p>
+                </div>
+
+                <div class="lang-card glass-card">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <h4>English</h4>
+                    <p>Professional Working Proficiency</p>
+                </div>
+
+                <div class="lang-card glass-card">
+                    <i class="fa-solid fa-comments"></i>
+                    <h4>Hindi</h4>
+                    <p>Professional Working Proficiency</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section" aria-label="Contact Section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Let's <span>Build Something</span></h2>
+                <p class="section-subtitle">Have an opportunity, project, or collaboration in mind? I'd love to connect.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-cards">
+                    <a href="mailto:absoluteolivia03@gmail.com" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>absoluteolivia03@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Absoluteolivia" target="_blank" rel="noopener noreferrer" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/Absoluteolivia</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/olivia-das-b7b706282/" target="_blank" rel="noopener noreferrer" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>Olivia Das</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Hooghly, West Bengal, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper glass-card">
+                    <h3><i class="fa-solid fa-paper-plane"></i> Send a Message</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <span class="error-msg" id="nameError">Please enter your name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <span class="error-msg" id="emailError">Please enter a valid email address</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Backend Internship / Collaboration" required>
+                            <span class="error-msg" id="subjectError">Please enter a subject</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Hello Olivia, I'd like to discuss..." required></textarea>
+                            <span class="error-msg" id="messageError">Please enter your message</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <h3>Olivia Das</h3>
+            <p>Backend Developer & Computer Science Student</p>
         </div>
 
-        <div class="contact-card">
-            <i class="fa-brands fa-github"></i>
-            <h3>GitHub</h3>
-            <p>github.com/Absoluteolivia</p>
-
-            <a href="https://github.com/Absoluteolivia"
-               target="_blank"
-               class="contact-btn">
-                Visit GitHub
-            </a>
+        <div class="footer-social">
+            <a href="https://github.com/Absoluteolivia" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/olivia-das-b7b706282/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:absoluteolivia03@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
 
-        <div class="contact-card">
-            <i class="fa-brands fa-linkedin"></i>
-            <h3>LinkedIn</h3>
-            <p>Olivia Das</p>
-
-            <a href="https://www.linkedin.com/in/olivia-das-b7b706282/"
-               target="_blank"
-               class="contact-btn">
-                View LinkedIn
-            </a>
+        <div class="footer-copyright">
+            <p>&copy; 2026 Olivia Das. All rights reserved.</p>
         </div>
-
     </div>
+</footer>
 
-</section>
-</section>
-<button id="topBtn">
+<!-- Back to Top Button -->
+<button id="topBtn" class="top-btn" aria-label="Back to top" title="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
+<!-- JavaScript -->
 <script src="script.js"></script>
 
 </body>
